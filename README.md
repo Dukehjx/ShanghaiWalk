@@ -45,4 +45,4 @@
 
 ## 许可证
 
-本项目遵循 MIT 许可证。# shanghaiwalk
+本项目遵循 MIT 许可证。
