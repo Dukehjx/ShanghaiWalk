@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             img.style.width = '100%';
             img.style.height = '100%';
             img.style.objectFit = 'cover';
-            img.src = '../images/timeline picture/' + matchingImage;
+            img.src = './images/timeline picture/' + matchingImage;
             imageContainer.appendChild(img);
         }
         // 如果没有找到匹配的图片，imageContainer将保持为空，CSS会显示为空白区域
