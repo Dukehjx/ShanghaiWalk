@@ -17,11 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 观察所有时间线项目
     timelineItems.forEach(item => {
         observer.observe(item);
-        
-        // 为每个时间线项目添加图片容器
-        const imageContainer = document.createElement('div');
-        imageContainer.className = 'timeline-image';
-        item.appendChild(imageContainer);
     });
 
     // 观察所有时代标题

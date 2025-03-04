@@ -23,33 +23,31 @@ document.addEventListener('DOMContentLoaded', function() {
         '2023-timeline.jpg'
     ];
     
-    timelineItems.forEach((item, index) => {
-        // 创建图片容器
-        const imageContainer = document.createElement('div');
-        imageContainer.className = 'timeline-image';
-        
-        // 创建图片元素
-        const img = document.createElement('img');
-        img.style.width = '100%';
-        img.style.height = '100%';
-        img.style.objectFit = 'cover';
-        
+    timelineItems.forEach((item) => {
         // 获取时间线项目的年份
         const yearElement = item.querySelector('h3');
         const year = yearElement ? yearElement.textContent.match(/\d{4}/)[0] : null;
         
+        // 创建图片容器
+        const imageContainer = document.createElement('div');
+        imageContainer.className = 'timeline-image';
+        
         // 查找匹配的图片
         const matchingImage = availableImages.find(img => img.startsWith(year));
         
-        // 如果找到匹配的图片，使用它；否则使用索引对应的图片
         if (matchingImage) {
+            // 如果找到匹配的图片，创建并添加图片元素
+            const img = document.createElement('img');
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
             img.src = '../images/timeline picture/' + matchingImage;
-        } else if (index < availableImages.length) {
-            img.src = '../images/timeline picture/' + availableImages[index];
+            imageContainer.appendChild(img);
         }
+        // 如果没有找到匹配的图片，imageContainer将保持为空，CSS会显示为空白区域
         
-        // 将图片添加到容器中
-        imageContainer.appendChild(img);
+        // 添加图片容器到时间线项目
+        item.appendChild(imageContainer);
         
         // 添加点击事件处理
         item.addEventListener('click', function() {
@@ -63,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // 切换当前项目的active类
             item.classList.toggle('active');
         });
-        
-        // 将图片容器添加到时间线项目中
-        item.appendChild(imageContainer);
     });
 
     // 添加时代标题的动画
