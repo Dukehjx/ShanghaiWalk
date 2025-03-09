@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the ShanghaiWalk team and our mission to promote Shanghai's culture and history">
+    <meta name="keywords" content="Shanghai, culture, history, about us, team, mission">
     <title>关于我们 | About Us - 上海漫步</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="animations.css">
+    <!-- Ensure proper rendering and touch zooming -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Header Section with Navigation -->
+    <header role="banner">
         <div class="logo">
-            <img src="./images/shanghaiwalk-logo.png" alt="Logo" class="logo-img">
+            <img src="./images/shanghaiwalk-logo.png" alt="ShanghaiWalk Logo" class="logo-img">
         </div>
         
-        <div class="language-toggle">
-            <button id="en-btn" class="lang-btn"><img src="./images/US-flag.png" alt="English"></button>
-            <button id="zh-btn" class="lang-btn"><img src="./images/China-flag.png" alt="中文"></button>
+        <div class="language-toggle" aria-label="Language Selection">
+            <button id="en-btn" class="lang-btn" aria-label="Switch to English">English</button>
+            <button id="zh-btn" class="lang-btn" aria-label="Switch to Chinese">中文</button>
         </div>
 
-        <nav>
+        <nav role="navigation" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a></li>
-                <li><a href="about.html" class="active"><span class="zh">关于我们</span><span class="en">About Us</span></a></li>
+                <li><a href="about.html" class="active" aria-current="page"><span class="zh">关于我们</span><span class="en">About Us</span></a></li>
                 <li><a href="shanghai-walk.html"><span class="zh">上海漫步</span><span class="en">Shanghai Walk</span></a></li>
                 <li><a href="shanghainese.html"><span class="zh">上海话</span><span class="en">Shanghainese</span></a></li>
                 <li><a href="shanghai-opera.html"><span class="zh">上海戏曲</span><span class="en">Shanghai Opera</span></a></li>
@@ -29,19 +39,20 @@
         </nav>
     </header>
 
-    <div class="floating-nav">
+    <!-- Floating Navigation for Mobile and Scroll -->
+    <div class="floating-nav" aria-label="Floating Navigation">
         <div class="float-left">
             <img src="./images/shanghaiwalk-logo.png" alt="Mini Logo" class="mini-logo">
         </div>
         <div class="float-center">
-            <button class="more-actions">
+            <button class="more-actions" aria-expanded="false" aria-controls="dropdown-menu">
                 <span class="zh">更多选项</span>
                 <span class="en">More Actions</span>
-                <i class="arrow-down"></i>
+                <i class="arrow-down" aria-hidden="true"></i>
             </button>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu" id="dropdown-menu">
                 <a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a>
-                <a href="about.html" class="active"><span class="zh">关于我们</span><span class="en">About Us</span></a>
+                <a href="about.html" class="active" aria-current="page"><span class="zh">关于我们</span><span class="en">About Us</span></a>
                 <a href="shanghai-walk.html"><span class="zh">上海漫步</span><span class="en">Shanghai Walk</span></a>
                 <a href="shanghainese.html"><span class="zh">上海话</span><span class="en">Shanghainese</span></a>
                 <a href="shanghai-opera.html"><span class="zh">上海戏曲</span><span class="en">Shanghai Opera</span></a>
@@ -49,16 +60,18 @@
             </div>
         </div>
         <div class="float-right">
-            <div class="float-language-toggle">
-                <button id="float-en-btn" class="lang-btn"><img src="./images/US-flag.png" alt="English"></button>
-                <button id="float-zh-btn" class="lang-btn"><img src="./images/China-flag.png" alt="中文"></button>
+            <div class="float-language-toggle" aria-label="Language Selection">
+                <button id="float-en-btn" class="lang-btn" aria-label="Switch to English">English</button>
+                <button id="float-zh-btn" class="lang-btn" aria-label="Switch to Chinese">中文</button>
             </div>
         </div>
     </div>
 
-    <main>
-        <section class="about-intro">
-            <h1><span class="zh">关于我们</span><span class="en">About Us</span></h1>
+    <!-- Main Content Area -->
+    <main role="main">
+        <!-- About Introduction Section -->
+        <section class="about-intro" aria-labelledby="about-heading">
+            <h1 id="about-heading"><span class="zh">关于我们</span><span class="en">About Us</span></h1>
             <div class="about-content">
                 <div class="zh">
                     <h2>项目介绍</h2>
@@ -90,13 +103,15 @@
             </div>
         </section>
 
-        <section class="team-section">
-            <h2><span class="zh">我们的团队</span><span class="en">Our Team</span></h2>
+        <!-- Team Section -->
+        <section class="team-section" aria-labelledby="team-heading">
+            <h2 id="team-heading"><span class="zh">我们的团队</span><span class="en">Our Team</span></h2>
             <div class="team-grid">
-                <div class="team-member">
+                <!-- Team Member 1 -->
+                <article class="team-member">
                     <div class="member-left">
                         <div class="member-photo">
-                            <img src="./images/member-placeholder.jpg" alt="Team Member 1" class="member-img">
+                            <img src="./images/member-placeholder.jpg" alt="Team Member 1 Portrait" class="member-img">
                         </div>
                         <div class="zh">
                             <h3>成员姓名</h3>
@@ -115,12 +130,13 @@
                             <p class="quote">"Shanghai is a vibrant city that perfectly blends tradition with modernity. Every lane tells a unique story, and every corner holds deep cultural significance."</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="team-member">
+                <!-- Team Member 2 -->
+                <article class="team-member">
                     <div class="member-left">
                         <div class="member-photo">
-                            <img src="./images/member-placeholder.jpg" alt="Team Member 2" class="member-img">
+                            <img src="./images/member-placeholder.jpg" alt="Team Member 2 Portrait" class="member-img">
                         </div>
                         <div class="zh">
                             <h3>成员姓名</h3>
@@ -139,12 +155,13 @@
                             <p class="quote">"Shanghai's charm lies in its inclusivity, featuring unique Haipai culture that perfectly witnesses the fusion of Eastern and Western cultures."</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="team-member">
+                <!-- Team Member 3 -->
+                <article class="team-member">
                     <div class="member-left">
                         <div class="member-photo">
-                            <img src="./images/member-placeholder.jpg" alt="Team Member 3" class="member-img">
+                            <img src="./images/member-placeholder.jpg" alt="Team Member 3 Portrait" class="member-img">
                         </div>
                         <div class="zh">
                             <h3>成员姓名</h3>
@@ -163,12 +180,13 @@
                             <p class="quote">"Shanghainese is a unique linguistic art that carries the historical memories and cultural characteristics of this city."</p>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="team-member">
+                <!-- Team Member 4 -->
+                <article class="team-member">
                     <div class="member-left">
                         <div class="member-photo">
-                            <img src="./images/member-placeholder.jpg" alt="Team Member 4" class="member-img">
+                            <img src="./images/member-placeholder.jpg" alt="Team Member 4 Portrait" class="member-img">
                         </div>
                         <div class="zh">
                             <h3>成员姓名</h3>
@@ -187,12 +205,13 @@
                             <p class="quote">"In Shanghai, tradition coexists with modernity, and every day brings new discoveries about this fascinating city."</p>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="cultural-significance">
-            <h2><span class="zh">文化意义</span><span class="en">Cultural Significance</span></h2>
+        <!-- Cultural Significance Section -->
+        <section class="cultural-significance" aria-labelledby="cultural-heading">
+            <h2 id="cultural-heading"><span class="zh">文化意义</span><span class="en">Cultural Significance</span></h2>
             <div class="significance-content">
                 <div class="zh">
                     <p>上海的非物质文化遗产包括：</p>
@@ -219,11 +238,14 @@
         </section>
     </main>
 
-    <footer>
+    <!-- Footer Section -->
+    <footer role="contentinfo">
         <p class="zh">&copy; 2024 上海漫步 版权所有</p>
         <p class="en">&copy; 2024 ShanghaiWalk. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript Files -->
     <script src="main.js"></script>
+    <script src="scroll-effects.js"></script>
 </body>
 </html> 

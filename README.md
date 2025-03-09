@@ -1,48 +1,137 @@
-# 上海漫步 | Shanghai Walk
+# ShanghaiWalk Website
 
-这是一个关于上海历史时间线的网页项目，展示了从19世纪末到21世纪的上海发展历程。项目包括时间线展示、图片展示、语言切换功能等。
+A bilingual (Chinese and English) website dedicated to showcasing and promoting the local culture of Shanghai.
 
-## 项目结构
+## Project Overview
 
-- `html/`: 包含所有的 HTML 文件。
-  - `shanghai-walk.html`: 主要的时间线展示页面。
-  - 其他页面如 `index.html`, `contact.html`, `shanghai-opera.html`, `shanghainese.html`, `about.html`。
+ShanghaiWalk is a comprehensive cultural website that introduces visitors to Shanghai's rich history, language, opera, and cultural experiences. The website features:
 
-- `css/`: 包含样式文件。
-  - `style.css`: 全局样式文件，定义了页面的布局、颜色、字体等。
+- **Multilingual Support**: Toggle between Chinese and English with user preferences stored using `localStorage`.
+- **Responsive Design**: Adaptive layouts for various devices using CSS media queries.
+- **Timeline Display**: Interactive historical timeline utilizing JavaScript and the Intersection Observer API.
+- **Cultural Introduction**: Detailed sections on Shanghai's culture, including dialects, opera, and lane culture.
+- **Team Introduction**: Team member profiles displayed in a card format.
+- **Events and Activities**: Listings of city walk events with comprehensive details.
+- **Social Media and Contact Information**: QR codes for social media platforms and contact details.
 
-- `js/`: 包含 JavaScript 文件。
-  - `timeline.js`: 负责时间线的图片加载和交互。
-  - `main.js`: 其他全局 JavaScript 功能。
-  - `timeline-animation.js`: 处理时间线的动画效果。
+## Project Structure
 
-- `images/timeline picture/`: 包含时间线使用的图片，按年份命名。
+```
+ShanghaiWalk Website/
+├── index.html              # Homepage
+├── about.html              # About Us page
+├── contact.html            # Contact information page
+├── shanghai-walk.html      # City walks and timeline page
+├── shanghainese.html       # Shanghai dialect page
+├── shanghai-opera.html     # Shanghai Opera page
+├── style.css               # Main stylesheet
+├── main.js                 # Main JavaScript functionality
+├── timeline.js             # Timeline functionality
+├── timeline-animation.js   # Timeline animation effects
+└── images/                 # Image assets directory
+    ├── timeline picture/   # Timeline images
+    └── ...                 # Other images
+```
 
-## 功能
+## Features
 
-1. **时间线展示**: 展示了上海从19世纪末到21世纪的历史事件。
-2. **图片展示**: 每个时间线项目都有对应的图片，图片根据年份自动匹配。
-3. **语言切换**: 支持中英文切换，用户可以通过点击按钮切换语言。
-4. **响应式设计**: 页面在不同设备上都有良好的显示效果。
+### Multilingual Support
 
-## 使用说明
+The website supports both Chinese and English languages. Users can switch between languages using the language toggle buttons in the header or floating navigation. Language preferences are saved using `localStorage` for a consistent experience across visits.
 
-1. 克隆或下载项目到本地。
-2. 确保所有图片都放在 `images/timeline picture/` 文件夹中，并按年份命名。
-3. 打开 `html/shanghai-walk.html` 文件查看时间线展示。
-4. 使用浏览器查看页面效果，点击时间线项目可以展开查看详细信息。
+### Responsive Design
 
-## 在 GitHub Pages 上托管
+The website is fully responsive and adapts to different screen sizes:
+- Desktop: Full layout with horizontal navigation
+- Mobile: Compact layout with dropdown navigation and optimized content display
 
-1. 将项目上传到 GitHub 仓库。
-2. 在 GitHub 仓库中，进入 `Settings`。
-3. 在 `Pages` 部分，选择 `main` 分支并设置根目录为 `/`。
-4. 保存设置后，GitHub Pages 将生成一个链接，您可以通过该链接访问您的网站。
+### Timeline Display
 
-## 贡献
+The Shanghai historical timeline provides an interactive journey through the city's development from the late 19th century to the present day. Features include:
 
-欢迎对项目进行贡献！请确保在提交前测试您的更改。
+- Era-based organization
+- Interactive timeline items that expand on click
+- Automatic image matching based on year
+- Smooth animations using Intersection Observer
 
-## 许可证
+### Cultural Content
 
-本项目遵循 MIT 许可证。
+The website offers rich cultural content across multiple pages:
+- Shanghai dialect introduction and basic phrases
+- Shanghai Opera art features and classic plays
+- Lane (Longtang) culture and architectural heritage
+- City walk events with detailed information
+
+## Development
+
+### Prerequisites
+
+- Basic knowledge of HTML, CSS, and JavaScript
+- A modern web browser
+- A code editor (VS Code, Sublime Text, etc.)
+
+### Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/shanghaiwalk-website.git
+```
+
+2. Open the project folder in your code editor
+
+3. Launch the website by opening `index.html` in your browser
+
+### Deployment
+
+The website can be deployed to any standard web hosting service or GitHub Pages:
+
+1. For GitHub Pages:
+   - Push the repository to GitHub
+   - Enable GitHub Pages in the repository settings
+   - Select the branch to deploy (usually `main` or `master`)
+
+2. For traditional web hosting:
+   - Upload all files to your web server via FTP
+   - Ensure the file structure is maintained
+
+## Accessibility
+
+The website follows accessibility best practices:
+- Semantic HTML structure
+- ARIA roles and attributes
+- Keyboard navigation support
+- Sufficient color contrast
+- Alternative text for images
+
+## Browser Compatibility
+
+The website is compatible with:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Android Chrome)
+
+## Contributing
+
+Contributions to improve the website are welcome. Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- All team members who contributed to the project
+- Shanghai cultural experts who provided content guidance
+- Open source libraries and tools used in development
+
+---
+
+© 2024 ShanghaiWalk. All rights reserved.

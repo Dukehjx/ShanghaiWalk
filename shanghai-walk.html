@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Shanghai's historical timeline and city walk events">
+    <meta name="keywords" content="Shanghai, history, timeline, city walks, events, tours">
     <title>上海漫步 | Shanghai Walk - 上海漫步</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="animations.css">
+    <!-- Ensure proper rendering and touch zooming -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Header Section with Navigation -->
+    <header role="banner">
         <div class="logo">
-            <img src="./images/shanghaiwalk-logo.png" alt="Logo" class="logo-img">
+            <img src="./images/shanghaiwalk-logo.png" alt="ShanghaiWalk Logo" class="logo-img">
         </div>
         
-        <div class="language-toggle">
-            <button id="en-btn" class="lang-btn"><img src="./images/US-flag.png" alt="English"></button>
-            <button id="zh-btn" class="lang-btn"><img src="./images/China-flag.png" alt="中文"></button>
+        <div class="language-toggle" aria-label="Language Selection">
+            <button id="en-btn" class="lang-btn" aria-label="Switch to English">English</button>
+            <button id="zh-btn" class="lang-btn" aria-label="Switch to Chinese">中文</button>
         </div>
 
-        <nav>
+        <nav role="navigation" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">首页 | Home</a></li>
                 <li><a href="about.html">关于我们 | About Us</a></li>
-                <li><a href="shanghai-walk.html" class="active">上海漫步 | Shanghai Walk</a></li>
+                <li><a href="shanghai-walk.html" class="active" aria-current="page">上海漫步 | Shanghai Walk</a></li>
                 <li><a href="shanghainese.html">上海话 | Shanghainese</a></li>
                 <li><a href="shanghai-opera.html">上海戏曲 | Shanghai Opera</a></li>
                 <li><a href="contact.html">联系我们 | Contact Us</a></li>
@@ -29,45 +39,50 @@
         </nav>
     </header>
 
-    <div class="floating-nav">
+    <!-- Floating Navigation for Mobile and Scroll -->
+    <div class="floating-nav" aria-label="Floating Navigation">
         <div class="float-left">
             <img src="./images/shanghaiwalk-logo.png" alt="Mini Logo" class="mini-logo">
         </div>
         <div class="float-center">
-            <button class="more-actions">
+            <button class="more-actions" aria-expanded="false" aria-controls="dropdown-menu">
                 <span class="zh">更多选项</span>
                 <span class="en">More Actions</span>
-                <i class="arrow-down"></i>
+                <i class="arrow-down" aria-hidden="true"></i>
             </button>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu" id="dropdown-menu">
                 <a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a>
                 <a href="about.html"><span class="zh">关于我们</span><span class="en">About Us</span></a>
-                <a href="shanghai-walk.html" class="active"><span class="zh">上海漫步</span><span class="en">Shanghai Walk</span></a>
+                <a href="shanghai-walk.html" class="active" aria-current="page"><span class="zh">上海漫步</span><span class="en">Shanghai Walk</span></a>
                 <a href="shanghainese.html"><span class="zh">上海话</span><span class="en">Shanghainese</span></a>
                 <a href="shanghai-opera.html"><span class="zh">上海戏曲</span><span class="en">Shanghai Opera</span></a>
                 <a href="contact.html"><span class="zh">联系我们</span><span class="en">Contact Us</span></a>
             </div>
         </div>
         <div class="float-right">
-            <div class="float-language-toggle">
-                <button id="float-en-btn" class="lang-btn"><img src="./images/US-flag.png" alt="English"></button>
-                <button id="float-zh-btn" class="lang-btn"><img src="./images/China-flag.png" alt="中文"></button>
+            <div class="float-language-toggle" aria-label="Language Selection">
+                <button id="float-en-btn" class="lang-btn" aria-label="Switch to English">English</button>
+                <button id="float-zh-btn" class="lang-btn" aria-label="Switch to Chinese">中文</button>
             </div>
         </div>
     </div>
 
-    <main>
-        <section class="timeline-section">
-            <h1>上海历史时间线 | Shanghai Historical Timeline</h1>
+    <!-- Main Content Area -->
+    <main role="main">
+        <!-- Timeline Section -->
+        <section class="timeline-section" aria-labelledby="timeline-heading">
+            <h1 id="timeline-heading">上海历史时间线 | Shanghai Historical Timeline</h1>
             
-            <div class="timeline">
+            <div class="timeline" role="list">
+                <!-- Late 19th - Early 20th Century Era -->
                 <div class="timeline-era">
                     <h2 class="era-title">
                         <span class="zh">19世纪末 - 20世纪初：上海的近代化</span>
                         <span class="en">Late 19th - Early 20th Century: Shanghai's Modernization</span>
                     </h2>
 
-                    <div class="timeline-item">
+                    <!-- 1895 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1895年</h3>
                             <h4>《马关条约》后外资进入</h4>
@@ -78,9 +93,11 @@
                             <h4>Foreign Investment After Treaty of Shimonoseki</h4>
                             <p>After the First Sino-Japanese War, Shanghai became a hotspot for foreign investment, with Japanese enterprises, banks, factories, and docks emerging.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1909 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1909年</h3>
                             <h4>上海有轨电车开通</h4>
@@ -91,9 +108,11 @@
                             <h4>Shanghai Tram System Opens</h4>
                             <p>Shanghai became the first Chinese city with a modern tram system, greatly improving public transportation.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1927 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1927年</h3>
                             <h4>上海特别市成立</h4>
@@ -104,9 +123,11 @@
                             <h4>Establishment of Shanghai Special City</h4>
                             <p>Shanghai officially became a "Special City" independent from Jiangsu Province, marking its status as a national economic and cultural center.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1930s Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1930年代</h3>
                             <h4>十里洋场的黄金时代</h4>
@@ -117,16 +138,19 @@
                             <h4>The Golden Age of Shanghai</h4>
                             <p>Shanghai became one of Asia's most prosperous international cities, with the Bund and Nanjing Road flourishing as cultural melting pots.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
                 </div>
 
+                <!-- Mid-20th Century Era -->
                 <div class="timeline-era">
                     <h2 class="era-title">
                         <span class="zh">20世纪中期 - 社会变革与新中国</span>
                         <span class="en">Mid-20th Century - Social Change and New China</span>
                     </h2>
 
-                    <div class="timeline-item">
+                    <!-- 1949 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1949年</h3>
                             <h4>上海解放</h4>
@@ -137,9 +161,11 @@
                             <h4>Liberation of Shanghai</h4>
                             <p>Shanghai was liberated from the concession system, becoming an important industrial and commercial center of New China.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1950s Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1950年代</h3>
                             <h4>工业化时代</h4>
@@ -150,9 +176,11 @@
                             <h4>Era of Industrialization</h4>
                             <p>State-owned enterprises rapidly developed, with steel, textile, and chemical industries becoming pillars of Shanghai's economy.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1978 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1978年</h3>
                             <h4>改革开放的春风吹进上海</h4>
@@ -163,16 +191,19 @@
                             <h4>Reform and Opening Up Reaches Shanghai</h4>
                             <p>Deng Xiaoping's Reform and Opening Up policy revitalized Shanghai's economy, making it a key city for international economic exchange.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
                 </div>
 
+                <!-- 1990s Era -->
                 <div class="timeline-era">
                     <h2 class="era-title">
                         <span class="zh">1990年代 - 上海经济腾飞</span>
                         <span class="en">1990s - Shanghai's Economic Take-off</span>
                     </h2>
 
-                    <div class="timeline-item">
+                    <!-- 1990 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1990年</h3>
                             <h4>浦东新区开发开放</h4>
@@ -183,9 +214,11 @@
                             <h4>Development of Pudong New Area</h4>
                             <p>The central government announced the development of Pudong, marking Shanghai's entry into the competition of world financial centers.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1991 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1991年</h3>
                             <h4>东方明珠塔开工建设</h3>
@@ -196,9 +229,11 @@
                             <h4>Construction of Oriental Pearl Tower</h4>
                             <p>Construction began on Shanghai's iconic Oriental Pearl TV Tower, becoming a symbol of China's reform and opening up.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 1995 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>1995年</h3>
                             <h4>上海地铁1号线开通</h4>
@@ -209,9 +244,11 @@
                             <h4>Opening of Shanghai Metro Line 1</h4>
                             <p>Shanghai Metro began operations, marking the city's entry into modern rail transit.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 2001 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2001年</h3>
                             <h4>上海举办APEC会议</h4>
@@ -222,16 +259,19 @@
                             <h4>Shanghai Hosts APEC Meeting</h4>
                             <p>Shanghai hosted its first global-level international conference, showcasing China's reform and opening up achievements.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
                 </div>
 
+                <!-- 21st Century Era -->
                 <div class="timeline-era">
                     <h2 class="era-title">
                         <span class="zh">21世纪 - 全球化大都市</span>
                         <span class="en">21st Century - Global Metropolis</span>
                     </h2>
 
-                    <div class="timeline-item">
+                    <!-- 2010 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2010年</h3>
                             <h4>上海世博会</h4>
@@ -242,9 +282,11 @@
                             <h4>Shanghai World Expo</h4>
                             <p>With the theme "Better City, Better Life," attracted over 200 participating countries, enhancing Shanghai's international influence.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 2013 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2013年</h3>
                             <h4>中国（上海）自由贸易试验区成立</h4>
@@ -255,9 +297,11 @@
                             <h4>Establishment of Shanghai Free Trade Zone</h4>
                             <p>China's first free trade zone was established in Shanghai, promoting trade liberalization and RMB internationalization.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 2016 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2016年</h3>
                             <h4>张江科技城发展为"上海硅谷"</h4>
@@ -268,9 +312,11 @@
                             <h4>Zhangjiang Hi-Tech Park Becomes "Shanghai's Silicon Valley"</h4>
                             <p>Shanghai accelerated technological innovation, with Zhangjiang becoming a core area for AI, biomedical, and semiconductor industries.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 2019 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2019年</h3>
                             <h4>上海成为全球金融中心</h4>
@@ -281,9 +327,11 @@
                             <h4>Shanghai as Global Financial Center</h4>
                             <p>The STAR Market launched on Shanghai Stock Exchange, further strengthening Shanghai's position as a global financial center.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 2021 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2021年</h3>
                             <h4>上海推出碳中和发展战略</h4>
@@ -294,9 +342,11 @@
                             <h4>Shanghai's Carbon Neutrality Strategy</h4>
                             <p>Shanghai became China's first city to propose carbon peak and neutrality development strategies, leading national green economic development.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
 
-                    <div class="timeline-item">
+                    <!-- 2023 Timeline Item -->
+                    <div class="timeline-item" role="listitem">
                         <div class="timeline-content zh">
                             <h3>2023年</h3>
                             <h4>全球创新中心建设推进</h4>
@@ -307,18 +357,21 @@
                             <h4>Global Innovation Center Development</h4>
                             <p>Shanghai proposed a five-year plan to become a world-class innovation center, with rapid development in AI, quantum computing, and new energy.</p>
                         </div>
+                        <div class="timeline-image"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="city-walks">
-            <h2>城市漫步活动 | City Walk Events</h2>
+        <!-- City Walks Section -->
+        <section class="city-walks" aria-labelledby="city-walks-heading">
+            <h2 id="city-walks-heading">城市漫步活动 | City Walk Events</h2>
             
             <div class="events-list">
-                <div class="event-item">
+                <!-- The Bund Event -->
+                <article class="event-item">
                     <div class="image-container">
-                        <img src="./images/the-bund-night.jpg" alt="The Bund" loading="lazy">
+                        <img src="./images/the-bund-night.jpg" alt="The Bund - Historic waterfront area of Shanghai at night" loading="lazy">
                     </div>
                     <div class="zh">
                         <h3>活动一：外滩建筑探索之旅</h3>
@@ -338,11 +391,12 @@
                             <li>Meeting Point: Bund Sightseeing Tunnel Entrance</li>
                         </ul>
                     </div>
-                </div>
+                </article>
 
-                <div class="event-item">
+                <!-- Tianzifang Event -->
+                <article class="event-item">
                     <div class="image-container">
-                        <img src="./images/tianzifang.jpg" alt="Tianzifang" loading="lazy">
+                        <img src="./images/tianzifang.jpg" alt="Tianzifang - Creative arts and crafts enclave in Shanghai" loading="lazy">
                     </div>
                     <div class="zh">
                         <h3>活动二：田子坊文艺之旅</h3>
@@ -362,11 +416,12 @@
                             <li>Meeting Point: Tianzifang Entrance</li>
                         </ul>
                     </div>
-                </div>
+                </article>
 
-                <div class="event-item">
+                <!-- Nanjing Road Event -->
+                <article class="event-item">
                     <div class="image-container">
-                        <img src="./images/nanjing-road.jpg" alt="Nanjing Road" loading="lazy">
+                        <img src="./images/nanjing-road.jpg" alt="Nanjing Road - Famous shopping street in Shanghai" loading="lazy">
                     </div>
                     <div class="zh">
                         <h3>活动三：南京路商业文化之旅</h3>
@@ -386,17 +441,22 @@
                             <li>Meeting Point: Nanjing East Road Metro Station</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- Footer Section -->
+    <footer role="contentinfo">
         <p>&copy; 2024 上海漫步 | ShanghaiWalk. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript Files -->
     <script src="main.js"></script>
+    <script src="scroll-effects.js"></script>
     <script src="timeline.js"></script>
     <script src="timeline-animation.js"></script>
+    
+    <!-- Note: Using images from the "images/timeline picture" folder with naming format: YYYY-timeline.jpg -->
 </body>
 </html> 
